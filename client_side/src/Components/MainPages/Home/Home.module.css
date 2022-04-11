@@ -7,19 +7,23 @@ border-radius: 10px;
 padding: 30px;
 text-align: center;
 }
-.heading{
-  font-size: 18px;
-  font-weight: bold;
-  margin-left: 10px;
-}
+
 .pText{
     font-size: 20px;
     line-height: 1;
     color: #c4c5c5;
+    margin-bottom: 10px;
 }
 .cardCenter{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 4rem;
+}
+.SignIN{
+  margin-top: 10px;
+}
+.SignIN span{
+  color: #111921;
+  font-size: 15px;
 }

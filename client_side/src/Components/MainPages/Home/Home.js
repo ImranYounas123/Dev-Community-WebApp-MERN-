@@ -1,33 +1,38 @@
 import React from "react";
 import Css_style from "./Home.module.css";
-import {Link} from 'react-router-dom';
+import { Link, useNavigate } from "react-router-dom";
 import Card from "../../DisplayWork/ReusuableCard/Card";
+import Button from "../../DisplayWork/ReusuableBtn/Button";
 const Home = () => {
+  const stle = {
+   color : "#669966",
+   textDecoration : 'none',
+   fontWeight : 'bold',
+   marginLeft : "10px",
+   fontSize : "20px"
+  } 
+  const navigate = useNavigate();
+  const UserRegistration = () =>{
+  navigate('/registration');
+  }
   return (
-<div className={Css_style.cardCenter}>
-  <Card title = "Welcome to Dev Community"></Card>
-{/* <div className={Css_style.HomeCard}>
-      <div className={Css_style.heading}>
-        <h1>Welcome to Dev Community</h1>
-      </div>
-      <div>
-        <p className={Css_style.pText}>
-          We created this community for learn new skills and mentor nd speaker
-          can guide here you can createown comunity and join our community House{" "}
-        </p>
-      </div>
-      <div>
-        <button>
-          <span>Get Username to Continue</span>
-          <img src="/assets/images/Arrow.png" alt="" />
-        </button>
-      </div>
-      <div>
-        <span>Have an invite text?</span>
-        <Link to='/login'>Sign In</Link>
-      </div>
-    </div> */}
-</div>
+  
+    <div className={Css_style.cardCenter}>
+      <Card title="Welcome to Dev Community">
+      <p className={Css_style.pText}>
+            We created this community for learn new skills and mentor nd speaker
+            can guide here you can createown comunity and join our community
+            House
+          </p>
+        <div>
+          <Button onClick = {UserRegistration} label = "Create UserName" />
+        </div>
+        <div className={Css_style.SignIN}>
+          <span>Have an invite text?</span>
+          <Link style={stle} to="/login">Sign In</Link>
+        </div>
+</Card>
+    </div>
   );
 };
 export default Home;
